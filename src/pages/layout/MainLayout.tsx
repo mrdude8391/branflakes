@@ -5,7 +5,7 @@ const MainLayout = () => {
   return (
     <>
       <Nav />
-      <div id="outlet" className="">
+      <div id="outlet">
         <Outlet />
       </div>
     </>
