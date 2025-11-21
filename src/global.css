@@ -1,24 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Figtree";
-  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap")
-    format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 @theme {
-  --font-Figtree: "Figtree", sans-serif;
+  --font-figtree: "Figtree", sans-serif;
 }
 
 :root {
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: dark;
+  color: oklch(0.97 0 0);
+  background-color: oklch(0.19 0 0);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+  @apply sticky w-full h-16;
+}
+
+#outlet {
+  @apply flex flex-col mx-auto my-4 p-4 w-full max-w-screen min-h-svh items-center;
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-screen px-4 lg:px-20;
+  }
+}
+
+@layer components {
+  .nav-button-current {
+    @apply transition-all duration-300 ease-in-out cursor-default;
+  }
+
+  .nav-button {
+    @apply transition-all duration-300 ease-in-out opacity-50 hover:opacity-100;
+  }
 }
