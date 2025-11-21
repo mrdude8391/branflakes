@@ -8,11 +8,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-border: var(--border);
 }
 
 :root {
   --background: oklch(0.19 0 0);
   --foreground: oklch(0.97 0 0);
+  --border: oklch(1 0 0 / 10%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,22 +24,35 @@
 
 @layer base {
   * {
-    @apply bg-background text-foreground border-foreground;
+    @apply bg-background text-foreground border-border font-figtree;
   }
   nav {
     @apply sticky w-full h-16;
   }
-  #outlet {
+  #layout-outlet {
     @apply flex flex-col mx-auto my-4 p-4 w-full max-w-screen min-h-svh items-center;
   }
   Button {
     @apply cursor-pointer;
   }
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  sub {
+    @apply text-lg text-foreground/80;
+  }
+  p {
+    @apply text-xl;
+  }
 }
 
 @layer utilities {
   .container {
-    @apply mx-auto max-w-screen px-4 lg:px-20;
+    @apply mx-auto max-w-3xl px-4 lg:px-20 items-center;
+  }
+
+  .flexCenter {
+    @apply flex flex-col items-center justify-center;
   }
 }
 
@@ -48,5 +63,26 @@
 
   .nav-button {
     @apply transition-all duration-300 ease-in-out opacity-50 hover:opacity-100;
+  }
+}
+
+.showContainer {
+  position: relative;
+  overflow: clip;
+}
+
+.autoShow {
+  display: block;
+  animation: text-appear 1s forwards;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30lvh;
+}
+
+@keyframes text-appear {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }

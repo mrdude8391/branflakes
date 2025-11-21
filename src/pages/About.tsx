@@ -1,8 +1,15 @@
 const About = () => {
   return (
-    <div>
-      About
-      <button className="p-4  border-2">banana</button>
+    <div className="container flex flex-col">
+      <div className="h-lvh border-2"></div>
+
+      <div className=" border-2 h-lvh flexCenter">
+        <div className="showContainer text-2xl ">
+          <span className="autoShow ">About</span>
+        </div>
+      </div>
+
+      <div className="h-lvh  border-2"></div>
     </div>
   );
 };
