@@ -12,7 +12,7 @@ const SelfInfo = () => {
       <div>
         <h1>Bryan (Jr-Chee) Hu</h1>
         <sub>Toronto, Canada</sub>
-        <p className="mt-4">
+        <p className="mt-4 text-justify">
           I'm a 23 year old Full-Stack Developer. I have been programming for
           over 4 years. I create professional websites and web apps.
         </p>
