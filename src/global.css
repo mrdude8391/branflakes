@@ -7,13 +7,15 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-container: var(--container);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-border: var(--border);
 }
 
 :root {
-  --background: oklch(0.19 0 0);
+  --background: oklch(0.17 0 0);
+  --container: oklch(0.19 0 0);
   --foreground: oklch(0.97 0 0);
   --border: oklch(1 0 0 / 10%);
   --accent: oklch(0.269 0 0);
@@ -26,35 +28,49 @@
 
 @layer base {
   * {
-    @apply bg-background text-foreground border-border font-figtree;
+    @apply border-border font-figtree;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
   nav {
     @apply sticky w-full h-16;
   }
   #layout-outlet {
-    @apply flex flex-col mx-auto my-4 p-4 w-full max-w-screen min-h-svh items-center;
+    @apply flex flex-col mx-auto my-8 w-full max-w-screen min-h-svh items-center;
   }
   Button {
-    @apply cursor-pointer;
+    @apply cursor-pointer bg-accent px-4 py-2 rounded-lg hover:bg-accent/80 transition-all;
   }
   h1 {
     @apply text-4xl font-bold;
   }
-  sub {
-    @apply text-lg text-foreground/80;
+  h2 {
+    @apply text-xl font-bold;
   }
-  p {
-    @apply text-xl;
+  h3 {
+    @apply text-xl font-semibold;
+  }
+  sub {
+    @apply text-lg text-foreground/70;
   }
 }
 
 @layer utilities {
-  .container {
-    @apply mx-auto max-w-3xl px-4 lg:px-20 items-center;
+  .max-container {
+    @apply mx-auto w-full px-4 items-start transition-all;
+  }
+
+  .rounded-accent-container {
+    @apply px-2 py-1 flex-auto hover:scale-105 transition-all flex items-center rounded-2xl bg-accent;
   }
 
   .flexCenter {
     @apply flex flex-col items-center justify-center;
+  }
+
+  .dash-block {
+    @apply w-full bg-container p-4 max-w-xl border rounded-lg flex flex-col gap-4;
   }
 }
 
@@ -68,27 +84,6 @@
   }
 
   .social-button {
-    @apply bg-accent px-4 py-2 flex items-center justify-center w-full rounded-md gap-2 text-lg;
-  }
-}
-
-.showContainer {
-  position: relative;
-  overflow: clip;
-}
-
-.autoShow {
-  display: block;
-  animation: text-appear 1s forwards;
-  animation-timeline: view();
-  animation-range: entry 20% cover 30lvh;
-}
-
-@keyframes text-appear {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
+    @apply bg-accent px-4 py-2 flex items-center hover:border hover:bg-accent/80 hover:scale-103 transition-all justify-center w-full rounded-lg gap-2 text-lg;
   }
 }
