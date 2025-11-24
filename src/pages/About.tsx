@@ -1,15 +1,15 @@
+import SelfInfo from "../components/SelfInfo";
+
 const About = () => {
   return (
-    <div className="container flex flex-col">
-      <div className="h-lvh border-2"></div>
-
-      <div className=" border-2 h-lvh flexCenter">
-        <div className="showContainer text-2xl ">
-          <span className="autoShow ">About</span>
+    <div className="max-container justify-center flex flex-col sm:flex-row flex-wrap gap-8">
+      <div className="dash-block">
+        <div>
+          <h1>Title</h1>
+          <sub>aboot</sub>
+          <p className="mt-4 sm:text-xl">yippee</p>
         </div>
       </div>
-
-      <div className="h-lvh  border-2"></div>
     </div>
   );
 };
