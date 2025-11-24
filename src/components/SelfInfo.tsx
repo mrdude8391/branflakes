@@ -1,7 +1,7 @@
 import type { MouseEvent } from "react";
 import GithubSVG from "../assets/Github/GithubSVG.tsx";
 import LinkedInSVG from "../assets/LinkedIn/LinkedInSVG.tsx";
-import { Cake, Contact, Languages, MapPin } from "lucide-react";
+import { Cake, Languages, MapPin } from "lucide-react";
 
 const SelfInfo = () => {
   const openNewtab = (e: MouseEvent, url: string) => {
