@@ -13,8 +13,7 @@ const Experience = () => {
 
 export default Experience;
 
-const WorkItem = (props: { children: ReactNode }) => {
-  const { children } = props;
+const WorkItem = ({ children }: { children: ReactNode }) => {
   return (
     <div>
       {children}
@@ -30,7 +29,6 @@ const WorkItem = (props: { children: ReactNode }) => {
   );
 };
 
-const Company = (props: { children: ReactNode }) => {
-  const { children } = props;
+const Company = ({ children }: { children: ReactNode }) => {
   return <h2>{children}</h2>;
 };
