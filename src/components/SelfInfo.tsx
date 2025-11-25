@@ -1,15 +1,10 @@
-import type { MouseEvent } from "react";
 import GithubSVG from "../assets/Github/GithubSVG.tsx";
 import LinkedInSVG from "../assets/LinkedIn/LinkedInSVG.tsx";
-import { Cake, Languages, MapPin } from "lucide-react";
+import { Cake, Languages, Mail, MapPin } from "lucide-react";
 
 const SelfInfo = () => {
-  const openNewtab = (e: MouseEvent, url: string) => {
-    e.preventDefault();
-    window.open(url, "_blank");
-  };
   return (
-    <div className="dash-block">
+    <section className="dashboard-card flex flex-col gap-4">
       <div>
         <h1>Bryan (Jr-Chee) Hu</h1>
         <sub>Software Engineer</sub>
@@ -18,7 +13,7 @@ const SelfInfo = () => {
           websites and web apps.
         </p>
       </div>
-      <div className="flex flex-wrap bg-background gap-2 px-4 py-2 rounded-lg text-foreground/80">
+      <div className="flex flex-wrap bg-background gap-2 px-4 py-2 rounded-lg text-foreground-muted">
         <div className="rounded-accent-container gap-1 ">
           <Cake className="size-5" />
           <p>23y/o</p>
@@ -33,24 +28,34 @@ const SelfInfo = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <button
-          className="social-button"
-          onClick={(e) => openNewtab(e, "https://github.com/mrdude8391")}
+        <a href="mailto:jrcheehu@gmail.com" target="_blank" className="w-full">
+          <button className="social-button">
+            <Mail className="size-6" />
+            Email
+          </button>
+        </a>
+        <a
+          href="https://github.com/mrdude8391"
+          target="_blank"
+          className="w-full"
         >
-          <GithubSVG className="size-6 fill-foreground" />
-          GitHub
-        </button>
-        <button
-          className="social-button"
-          onClick={(e) =>
-            openNewtab(e, "https://www.linkedin.com/in/hu-bryan/")
-          }
+          <button className="social-button">
+            <GithubSVG className="size-6 fill-foreground" />
+            GitHub
+          </button>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/hu-bryan/"
+          target="_blank"
+          className="w-full"
         >
-          <LinkedInSVG className="size-6 fill-foreground" />
-          LinkedIn
-        </button>
+          <button className="social-button">
+            <LinkedInSVG className="size-6 fill-foreground" />
+            LinkedIn
+          </button>
+        </a>
       </div>
-    </div>
+    </section>
   );
 };
 
