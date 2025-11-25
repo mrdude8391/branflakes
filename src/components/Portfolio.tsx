@@ -1,8 +1,13 @@
 const Portfolio = () => {
   return (
-    <div className="dash-block">
+    <section className="dashboard-card">
       <h1>Portfolio</h1>
-    </div>
+      <div>
+        <div>
+          <img src="" alt="" />
+        </div>
+      </div>
+    </section>
   );
 };
 
