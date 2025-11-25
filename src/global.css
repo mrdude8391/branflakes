@@ -9,6 +9,8 @@
   --color-background: var(--background);
   --color-container: var(--container);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-mudkip: var(--mudkip);
   --color-accent: var(--accent);
   --color-border: var(--border);
 }
@@ -17,9 +19,12 @@
   --background: oklch(0.17 0 0);
   --container: oklch(0.19 0 0);
   --foreground: oklch(0.97 0 0);
+  --foreground-muted: oklch(0.8 0 0);
+  --mudkip: oklch(0.6885 0.1237 237.82);
   --border: oklch(1 0 0 / 10%);
   --accent: oklch(0.269 0 0);
 
+  color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,13 +51,17 @@
     @apply text-4xl font-bold;
   }
   h2 {
-    @apply text-xl font-bold;
+    @apply text-2xl font-bold;
   }
   h3 {
     @apply text-xl font-semibold;
   }
   sub {
-    @apply text-lg text-foreground/70;
+    @apply text-lg text-foreground-muted;
+  }
+
+  footer {
+    @apply w-full px-4 my-12 items-center justify-center;
   }
 }
 
@@ -69,8 +78,8 @@
     @apply flex flex-col items-center justify-center;
   }
 
-  .dash-block {
-    @apply w-full bg-container p-4 max-w-xl border rounded-lg flex flex-col gap-4;
+  .dashboard-card {
+    @apply w-full bg-container p-4 max-w-xl border rounded-lg;
   }
 }
 
