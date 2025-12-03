@@ -27,30 +27,34 @@ const SelfInfo = () => {
           English & Chinese
         </div>
       </div>
-      <div className="flex gap-2">
-        <a href="mailto:jrcheehu@gmail.com" target="_blank" className="w-full">
+      <div className="flex flex-wrap gap-2">
+        <a
+          href="mailto:jrcheehu@gmail.com"
+          target="_blank"
+          className="flex flex-auto"
+        >
           <button className="social-button">
-            <Mail className="size-6" />
+            <Mail className="size-5 lg:size-6" />
             Email
           </button>
         </a>
         <a
           href="https://github.com/mrdude8391"
           target="_blank"
-          className="w-full"
+          className="flex flex-auto"
         >
           <button className="social-button">
-            <GithubSVG className="size-6 fill-foreground" />
+            <GithubSVG className="size-5 lg:size-6 fill-foreground" />
             GitHub
           </button>
         </a>
         <a
           href="https://www.linkedin.com/in/hu-bryan/"
           target="_blank"
-          className="w-full"
+          className="flex flex-auto"
         >
           <button className="social-button">
-            <LinkedInSVG className="size-6 fill-foreground" />
+            <LinkedInSVG className="size-5 lg:size-6 fill-foreground" />
             LinkedIn
           </button>
         </a>
