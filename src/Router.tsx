@@ -5,7 +5,7 @@ import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 import VolleyApp from "./pages/portfolio/VolleyApp";
 
-function App() {
+function Router() {
   const router = createBrowserRouter([
     {
       element: <MainLayout />,
@@ -20,4 +20,4 @@ function App() {
   return <RouterProvider router={router} />;
 }
 
-export default App;
+export default Router;
