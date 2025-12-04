@@ -8,7 +8,7 @@ const Portfolio = () => {
     <section className="dashboard-card flex flex-col gap-4">
       <h1>Portfolio</h1>
       <div className="my-work">
-        <Link to="/volley" viewTransition>
+        <Link to="/volley">
           <div className="project-image-card group">
             <img src={SportsDesktopImg} alt="Sports app desktop image" />
 
