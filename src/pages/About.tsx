@@ -1,6 +1,9 @@
+import Nav from "../components/Nav";
+
 const About = () => {
   return (
     <div className="max-container max-w-xl justify-center flex flex-col  flex-wrap gap-8">
+      <Nav />
       <div className="dashboard-card h-svh">
         <div>
           <h1>Title</h1>
