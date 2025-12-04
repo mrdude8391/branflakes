@@ -42,7 +42,7 @@
     @apply sticky w-full h-16;
   }
   #layout-outlet {
-    @apply flex flex-col mx-auto my-8 w-full max-w-screen min-h-svh items-center;
+    @apply flex flex-col mx-auto w-full max-w-screen min-h-svh items-center;
   }
   Button {
     @apply cursor-pointer bg-accent px-4 py-2 rounded-lg hover:bg-accent/80 transition-all;
@@ -65,22 +65,24 @@
   }
 }
 
-@layer utilities {
-  .max-container {
-    @apply mx-auto w-full px-4 items-start transition-all;
-  }
+@utility max-container {
+  @apply mx-auto w-full px-4 items-start transition-all;
+}
 
-  .rounded-accent-container {
-    @apply px-2 py-1 flex-auto hover:scale-105 transition-all flex items-center rounded-2xl bg-accent;
-  }
+@utility rounded-accent-container {
+  @apply px-2 py-1 flex-auto hover:scale-105 transition-all flex items-center rounded-2xl bg-accent;
+}
 
-  .flexCenter {
-    @apply flex flex-col items-center justify-center;
-  }
+@utility flexCol {
+  @apply flex flex-col;
+}
 
-  .dashboard-card {
-    @apply w-full bg-container p-4 max-w-xl border rounded-lg;
-  }
+@utility flexCenter {
+  @apply flex flex-col items-center justify-center;
+}
+
+@utility dashboard-card {
+  @apply w-full bg-container p-4 max-w-xl border rounded-lg;
 }
 
 @layer components {
@@ -136,5 +138,49 @@
     height: 100%;
     opacity: 50%;
     z-index: -1;
+  }
+
+  /* Project details */
+
+  .project-details {
+    @apply flex flex-col items-center w-full;
+  }
+
+  .project-details-inner {
+    @apply flex flex-col items-center gap-12 max-w-5xl w-full px-4 mb-[6rem];
+  }
+
+  .project-details-inner .header {
+    @apply w-full bg-container p-4 border rounded-lg flex flex-col gap-2;
+  }
+
+  .project-details-inner .header .tech-list {
+    @apply flex gap-2 flex-wrap;
+  }
+  .project-details-inner .header .tech-list li {
+    @apply text-sm bg-accent px-2 rounded-xl;
+  }
+
+  .project-details-inner .description {
+    @apply flexCol gap-4 w-full;
+  }
+
+  .project-details .images {
+    @apply px-4 bg-accent w-full flexCenter py-[6rem];
+  }
+
+  .project-details .images-inner {
+    @apply flexCenter max-w-5xl;
+  }
+
+  .project-details .images-inner ul {
+    @apply flexCenter gap-4;
+  }
+
+  .project-details .images-inner li {
+    @apply rounded-lg bg-accent;
+  }
+
+  .project-details .images-inner img {
   }
 }
