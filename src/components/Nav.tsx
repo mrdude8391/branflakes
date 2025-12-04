@@ -11,14 +11,10 @@ const Nav = () => {
     <>
       <nav>
         <div className="flex items-center h-full justify-center gap-12 ">
-          <Link to="/" className={navButtonBehavior("/")} viewTransition>
+          <Link to="/" className={navButtonBehavior("/")}>
             Work
           </Link>
-          <Link
-            to="/about"
-            className={navButtonBehavior("/about")}
-            viewTransition
-          >
+          <Link to="/about" className={navButtonBehavior("/about")}>
             About
           </Link>
         </div>
