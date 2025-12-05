@@ -1,6 +1,6 @@
 import { SquareArrowOutUpRight } from "lucide-react";
-import SportsDesktopImg from "../assets/Sports App/desktop.png";
-import ReactSVG from "../assets/React/ReactSVG";
+import SportsDesktopImg from "/src/assets/sports_app_screenshots/vb - athlete stat.png";
+import { ReactSVG, MongoDBSVG } from "../assets/SvgLogos";
 import { Link } from "react-router-dom";
 
 const Portfolio = () => {
@@ -20,8 +20,8 @@ const Portfolio = () => {
                   <p>React</p>
                 </li>
                 <li>
-                  <ReactSVG className="size-6 fill-foreground" />
-                  <p>React</p>
+                  <MongoDBSVG className="size-6 fill-foreground" />
+                  <p>MongoDB</p>
                 </li>
               </ul>
               <p>VOLLEYBALL STATS WEB APP</p>

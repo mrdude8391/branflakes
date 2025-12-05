@@ -1,5 +1,4 @@
-import GithubSVG from "../assets/Github/GithubSVG.tsx";
-import LinkedInSVG from "../assets/LinkedIn/LinkedInSVG.tsx";
+import { LinkedInSVG, GithubSVG } from "../assets/SvgLogos";
 import { Cake, Languages, Mail, MapPin } from "lucide-react";
 
 const SelfInfo = () => {
