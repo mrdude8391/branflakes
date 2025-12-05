@@ -13,7 +13,7 @@ function Router() {
         { path: "/", element: <Work /> },
         { path: "/about", element: <About /> },
         { path: "/volley", element: <VolleyApp /> },
-        { path: "/*", element: <NotFound /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
   ]);
