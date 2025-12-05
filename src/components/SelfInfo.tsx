@@ -4,14 +4,7 @@ import {
   ReactSVG,
   TypescriptSVG,
 } from "../assets/SvgLogos";
-import {
-  Cake,
-  GraduationCap,
-  Languages,
-  Layers,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { GraduationCap, Languages, Layers, Mail, MapPin } from "lucide-react";
 
 const SelfInfo = () => {
   return (
