@@ -15,7 +15,15 @@ const SelfInfo = () => {
       <div className="flex flex-wrap bg-background gap-2 px-4 py-2 rounded-lg text-foreground-muted">
         <div className="rounded-accent-container gap-1 ">
           <Cake className="size-5" />
-          <p>23y/o</p>
+          <p>React</p>
+        </div>
+        <div className="rounded-accent-container gap-1 ">
+          <Cake className="size-5" />
+          <p>Typescript</p>
+        </div>
+        <div className="rounded-accent-container gap-1 ">
+          <Cake className="size-5" />
+          <p>Biomedical Engineering Bachelors</p>
         </div>
         <div className="rounded-accent-container gap-1 ">
           <MapPin className="size-5" />

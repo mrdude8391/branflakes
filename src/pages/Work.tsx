@@ -5,7 +5,7 @@ import SelfInfo from "../components/SelfInfo";
 
 const Work = () => {
   return (
-    <div className="max-container justify-center flex flex-col sm:flex-row flex-wrap gap-8">
+    <div className="max-container justify-center flex flex-col items-center  flex-wrap gap-8">
       <Nav />
       <SelfInfo />
       <Experience />
