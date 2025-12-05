@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Portfolio = () => {
   return (
     <section className="dashboard-card flex flex-col gap-4">
-      <h1>Portfolio</h1>
+      <h1>Projects</h1>
       <div className="my-work">
         <Link to="/volley">
           <div className="project-image-card group">

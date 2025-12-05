@@ -70,7 +70,7 @@
 }
 
 @utility rounded-accent-container {
-  @apply px-2 py-1 flex-auto hover:scale-105 transition-all flex items-center rounded-2xl bg-accent;
+  @apply px-4 py-1 flex-auto hover:scale-105 transition-all flex items-center rounded-2xl bg-accent;
 }
 
 @utility flexCol {
@@ -82,7 +82,7 @@
 }
 
 @utility dashboard-card {
-  @apply w-full bg-container p-4 max-w-xl border rounded-lg;
+  @apply w-full bg-container p-4 max-w-2xl border rounded-lg;
 }
 
 @layer components {

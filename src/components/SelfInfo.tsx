@@ -1,5 +1,17 @@
-import { LinkedInSVG, GithubSVG } from "../assets/SvgLogos";
-import { Cake, Languages, Mail, MapPin } from "lucide-react";
+import {
+  LinkedInSVG,
+  GithubSVG,
+  ReactSVG,
+  TypescriptSVG,
+} from "../assets/SvgLogos";
+import {
+  Cake,
+  GraduationCap,
+  Languages,
+  Layers,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 const SelfInfo = () => {
   return (
@@ -12,22 +24,26 @@ const SelfInfo = () => {
           websites and web apps.
         </p>
       </div>
-      <div className="flex flex-wrap bg-background gap-2 px-4 py-2 rounded-lg text-foreground-muted">
+      <div className="flex flex-wrap bg-background gap-2 px-4 py-2 rounded-lg text-foreground-muted fill-foreground-muted">
         <div className="rounded-accent-container gap-1 ">
-          <Cake className="size-5" />
+          <ReactSVG className="size-5" />
           <p>React</p>
         </div>
         <div className="rounded-accent-container gap-1 ">
-          <Cake className="size-5" />
+          <TypescriptSVG className="size-5" />
           <p>Typescript</p>
         </div>
         <div className="rounded-accent-container gap-1 ">
-          <Cake className="size-5" />
-          <p>Biomedical Engineering Bachelors</p>
+          <Layers className="size-5" />
+          <p>Fullstack</p>
         </div>
         <div className="rounded-accent-container gap-1 ">
           <MapPin className="size-5" />
           Toronto
+        </div>
+        <div className="rounded-accent-container gap-1 ">
+          <GraduationCap className="size-5" />
+          <p>Biomedical B.Eng</p>
         </div>
         <div className="rounded-accent-container gap-1 ">
           <Languages className="size-5" />
