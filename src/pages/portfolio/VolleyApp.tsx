@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import SportsDesktopImg from "../../assets/Sports App/desktop.png";
+import SportsDesktopImg from "/src/assets/sports_app_screenshots/vb - athlete stat.png";
+import LoginImg from "/src/assets/sports_app_screenshots/vb - login.png";
+import AthleteListImg from "/src/assets/sports_app_screenshots/vb - athletes list.png";
+import AthleteStatChartImg from "/src/assets/sports_app_screenshots/vb - athlete stat chart.png";
+import AthleteStatTableImg from "/src/assets/sports_app_screenshots/vb - athlete stat table.png";
+import AthleteStatListImg from "/src/assets/sports_app_screenshots/vb - athlete stat list.png";
+import AthleteStatDatePickerImg from "/src/assets/sports_app_screenshots/vb - athlete stat date picker.png";
+import { SquareArrowUpRight } from "lucide-react";
 const VolleyApp = () => {
   return (
     <div className="project-details relative">
@@ -9,11 +16,8 @@ const VolleyApp = () => {
         </Link>
       </div>
       <div className="project-details-inner">
-        <div>
-          <img src={SportsDesktopImg} alt="Sports app desktop image" />
-        </div>
         <div className="header">
-          <h1>Volleyball stats tracking app</h1>
+          <h1>🏐 Volleyball stats tracking app</h1>
           <ul className="tech-list">
             <li>React</li>
             <li>TypeScript</li>
@@ -27,15 +31,34 @@ const VolleyApp = () => {
             target="_blank"
             className="mt-2"
           >
-            <button>Visit App</button>
+            <button>
+              Visit App <SquareArrowUpRight className="size-4" />
+            </button>
           </a>
         </div>
         <div className="description">
-          <h2>Why and What</h2>
-          <p>
-            I built this so that I can track my stats over time and visualize
-            the data.
-          </p>
+          <div className="hero">
+            <h2>Why and What</h2>
+            <p>
+              I built this app so that I can track my stats over time and
+              visualize my personal progress over time. The app is for
+              volleyball players to enter their game stats and receive a visual
+              representation of the stats. A login will be required so that the
+              data can be tied to a user. The user can also specify the date
+              range to view to narrow down the results.
+            </p>
+            <p>
+              The app was built using the popular MERN stack and hosted on
+              Vercel.
+            </p>
+          </div>
+          <div className="features">
+            <h2>Features</h2>
+            <p>🔐 User Authentication using JWT</p>
+            <p>📊 Dynamic charts and data visualizations</p>
+            <p>💻 Responsive UI for both desktop and mobile</p>
+            <p>🌗 Light and dark UI modes</p>
+          </div>
         </div>
       </div>
 
@@ -43,14 +66,28 @@ const VolleyApp = () => {
         <div className="images-inner">
           <ul>
             <li>
-              <img src={SportsDesktopImg} alt="Sports app desktop image" />
-              <p>description</p>
+              <img src={LoginImg} alt="volleyball app login page screenshot" />
+            </li>
+            <li>
+              <img src={AthleteListImg} alt="Sports app desktop image" />
             </li>
             <li>
               <img src={SportsDesktopImg} alt="Sports app desktop image" />
             </li>
             <li>
-              <img src={SportsDesktopImg} alt="Sports app desktop image" />
+              <img src={AthleteStatChartImg} alt="Sports app desktop image" />
+            </li>
+            <li>
+              <img src={AthleteStatTableImg} alt="Sports app desktop image" />
+            </li>
+            <li>
+              <img src={AthleteStatListImg} alt="Sports app desktop image" />
+            </li>
+            <li>
+              <img
+                src={AthleteStatDatePickerImg}
+                alt="Sports app desktop image"
+              />
             </li>
           </ul>
         </div>

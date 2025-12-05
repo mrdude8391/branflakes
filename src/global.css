@@ -44,7 +44,7 @@
   #layout-outlet {
     @apply flex flex-col mx-auto w-full max-w-screen min-h-svh items-center;
   }
-  Button {
+  button {
     @apply cursor-pointer bg-accent px-4 py-2 rounded-lg hover:bg-accent/80 transition-all;
   }
   h1 {
@@ -147,7 +147,7 @@
   }
 
   .project-details-inner {
-    @apply flex flex-col items-center gap-12 max-w-5xl w-full px-4 mb-[6rem];
+    @apply flex flex-col items-center gap-12 max-w-5xl w-full px-4 mb-24;
   }
 
   .project-details-inner .header {
@@ -161,8 +161,20 @@
     @apply text-sm bg-accent px-2 rounded-xl;
   }
 
+  .project-details-inner .header button {
+    @apply flex items-center gap-2;
+  }
+
   .project-details-inner .description {
     @apply flexCol gap-4 w-full;
+  }
+
+  .project-details-inner .description .hero p {
+    @apply mt-2;
+  }
+
+  .project-details-inner .description .features h2 {
+    @apply mb-2;
   }
 
   .project-details .images {
@@ -182,5 +194,6 @@
   }
 
   .project-details .images-inner img {
+    @apply rounded-lg;
   }
 }
