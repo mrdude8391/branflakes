@@ -80,7 +80,7 @@
 }
 
 @utility dashboard-card {
-  @apply w-full bg-container p-4 max-w-2xl lg:max-w-xl border rounded-lg;
+  @apply w-full bg-container p-4 max-w-2xl lg:max-w-2xl border rounded-lg;
 }
 
 @utility hover-pop {
@@ -93,7 +93,7 @@
 
 @layer components {
   .dashboard {
-    @apply flex flex-col 2xl:flex-row gap-4 items-start;
+    @apply flex flex-col  gap-4 items-start;
   }
   .nav-button-current {
     @apply transition-all duration-300 ease-in-out cursor-default;
@@ -164,17 +164,17 @@
   }
 
   .project-details-inner .header {
-    @apply w-full bg-container p-4 border rounded-lg flex flex-col gap-2;
+    @apply w-full bg-container items-center p-4 border rounded-lg flex flex-col gap-2;
   }
 
   .project-details-inner .header .tech-list {
-    @apply flex gap-2 flex-wrap;
+    @apply flex gap-2 flex-wrap mb-4;
   }
   .project-details-inner .header .tech-list li {
     @apply text-sm bg-accent px-2 rounded-xl;
   }
 
-  .project-details-inner .header button {
+  .project-details-inner .header button a {
     @apply flex items-center gap-2;
   }
 

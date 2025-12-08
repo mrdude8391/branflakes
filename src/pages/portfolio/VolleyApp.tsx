@@ -26,16 +26,14 @@ const VolleyApp = () => {
             <li>Express</li>
             <li>Node</li>
           </ul>
-          <a
-            href="https://sports-data-app.vercel.app/"
-            target="_blank"
-            className="mt-2"
-          >
-            <button>
+
+          <button>
+            <a href="https://sports-data-app.vercel.app/" target="_blank">
               Visit App <SquareArrowUpRight className="size-4" />
-            </button>
-          </a>
+            </a>
+          </button>
         </div>
+
         <div className="description">
           <div className="hero">
             <h2>Why and What</h2>
