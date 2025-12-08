@@ -10,9 +10,9 @@ const SelfInfo = () => {
   return (
     <section className="dashboard-card flex flex-col gap-4">
       <div>
-        <h1>Bryan (Jr-Chee) Hu</h1>
-        <sub>Software Engineer</sub>
-        <p className="mt-4 sm:text-xl">
+        <h1 className="hover-pop origin-bottom-left">Bryan (Jr-Chee) Hu</h1>
+        <p className="sub hover-pop origin-bottom-left">Software Engineer</p>
+        <p className="mt-4 sm:text-xl hover-pop origin-bottom-left hover:scale-102">
           I'm a full stack developer and specialize in creating professional
           websites and web apps.
         </p>

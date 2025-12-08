@@ -53,11 +53,9 @@
   h2 {
     @apply text-2xl font-bold;
   }
+
   h3 {
     @apply text-xl font-semibold;
-  }
-  sub {
-    @apply text-lg text-foreground-muted;
   }
 
   footer {
@@ -83,6 +81,14 @@
 
 @utility dashboard-card {
   @apply w-full bg-container p-4 max-w-2xl lg:max-w-xl border rounded-lg;
+}
+
+@utility hover-pop {
+  @apply hover:scale-105 transition-all;
+}
+
+@utility sub {
+  @apply text-lg text-foreground-muted;
 }
 
 @layer components {

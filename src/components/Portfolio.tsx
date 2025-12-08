@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Portfolio = () => {
   return (
     <section className="dashboard-card flex flex-col gap-4">
-      <h1>Projects</h1>
+      <h1 className="hover-pop origin-bottom-left">Projects</h1>
       <div className="projects">
         <div className="project-container">
           <VbAppCard />

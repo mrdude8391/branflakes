@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 const Experience = () => {
   return (
     <section className="dashboard-card flex flex-col gap-8">
-      <h1>Experience</h1>
+      <h1 className="hover-pop origin-bottom-left">Experience</h1>
       <div className="flex flex-col gap-12">
         <WorkItem>
           <Company>NOVX Systems</Company>
@@ -39,17 +39,25 @@ const WorkItem = ({ children }: { children: ReactNode }) => {
 };
 
 const Company = ({ children }: { children: ReactNode }) => {
-  return <h2>{children}</h2>;
+  return <h2 className="hover-pop origin-bottom-left">{children}</h2>;
 };
 
 const Title = ({ children }: { children: ReactNode }) => {
-  return <h3>{children}</h3>;
+  return <h3 className="hover-pop origin-bottom-left">{children}</h3>;
 };
 
 const Date = ({ children }: { children: ReactNode }) => {
-  return <p className="text-sm text-foreground-muted">{children}</p>;
+  return (
+    <p className="text-sm text-foreground-muted hover-pop origin-bottom-left">
+      {children}
+    </p>
+  );
 };
 
 const Description = ({ children }: { children: ReactNode }) => {
-  return <p className="mt-2 text-lg leading-6">{children}</p>;
+  return (
+    <p className="mt-2 text-lg leading-6 hover-pop origin-left hover:scale-102">
+      {children}
+    </p>
+  );
 };
