@@ -28,7 +28,7 @@ export default Portfolio;
 const VbAppCard = () => {
   return (
     <div className="project-container">
-      <Link to="/volley">
+      <a href="/volley">
         <div className="project-image-card group">
           <img src={SportsDesktopImg} alt="Sports app desktop image" />
 
@@ -59,14 +59,14 @@ const VbAppCard = () => {
             </button>
           </div>
         </div>
-      </Link>
+      </a>
     </div>
   );
 };
 
 const YMTCard = () => {
   return (
-    <Link to="/volley">
+    <a href="/volley">
       <div className="project-image-card group">
         <img src={SportsDesktopImg} alt="Sports app desktop image" />
 
@@ -97,6 +97,6 @@ const YMTCard = () => {
           </button>
         </div>
       </div>
-    </Link>
+    </a>
   );
 };
