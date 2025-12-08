@@ -82,10 +82,13 @@
 }
 
 @utility dashboard-card {
-  @apply w-full bg-container p-4 max-w-2xl border rounded-lg;
+  @apply w-full bg-container p-4 max-w-2xl lg:max-w-xl border rounded-lg;
 }
 
 @layer components {
+  .dashboard {
+    @apply flex flex-col 2xl:flex-row gap-4 items-start;
+  }
   .nav-button-current {
     @apply transition-all duration-300 ease-in-out cursor-default;
   }
@@ -98,12 +101,20 @@
     @apply bg-accent px-4 py-2 flex items-center hover:border hover:bg-accent/80 hover:scale-103 transition-all justify-center w-full rounded-lg gap-2 lg:text-lg;
   }
 
+  .projects {
+    @apply relative flex flex-col gap-8;
+  }
+
+  .project-container {
+    position: relative;
+  }
+
   .project-image-card {
     @apply rounded-lg overflow-hidden relative cursor-pointer;
   }
 
   .project-image-card .overlay {
-    @apply flex flex-col w-full pointer-events-none cursor-pointer absolute -bottom-12 transition-all duration-300 left-0 z-10 p-4;
+    @apply flex flex-col gap-2 w-full pointer-events-none cursor-pointer absolute -bottom-12 transition-all duration-300 left-0 z-10 p-4;
   }
 
   .project-image-card .overlay ul {
@@ -119,11 +130,7 @@
   }
 
   .project-image-card button {
-    @apply flex items-center w-fit mt-4 text-[12px] p-1 px-2 bg-foreground text-background;
-  }
-
-  .my-work {
-    position: relative;
+    @apply flex items-center w-fit mt-2 text-[12px] p-1 px-2 bg-foreground text-background;
   }
 
   .project-image-card .overlay::before {
@@ -136,7 +143,7 @@
     background-color: var(--background);
     width: 100%;
     height: 100%;
-    opacity: 50%;
+    opacity: 70%;
     z-index: -1;
   }
 
