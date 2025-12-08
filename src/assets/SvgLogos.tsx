@@ -108,7 +108,63 @@ const ExpressSVG = (props: { className: string }) => {
   );
 };
 
+const NextSvg = (props: { className: string }) => {
+  const { className } = props;
+  return (
+    <svg
+      className={className}
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>Next.js</title>
+      <path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z" />
+    </svg>
+  );
+};
+
+const MotionSVG = (props: { className: string }) => {
+  const { className } = props;
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 34 12"
+    >
+      <path d="M 12.838 0 L 6.12 11.989 L 0 11.989 L 5.245 2.628 C 6.059 1.176 8.088 0 9.778 0 Z M 27.846 2.997 C 27.846 1.342 29.216 0 30.906 0 C 32.596 0 33.966 1.342 33.966 2.997 C 33.966 4.653 32.596 5.995 30.906 5.995 C 29.216 5.995 27.846 4.653 27.846 2.997 Z M 13.985 0 L 20.105 0 L 13.387 11.989 L 7.267 11.989 Z M 21.214 0 L 27.334 0 L 22.088 9.362 C 21.275 10.813 19.246 11.989 17.556 11.989 L 14.496 11.989 Z"></path>
+    </svg>
+  );
+};
+
+const EmailJSSVG = (props: { className: string }) => {
+  const { className } = props;
+  return (
+    <svg
+      className={className}
+      aria-hidden="true"
+      role="img"
+      viewBox="0 0 510.88 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        fill="inherit"
+        height="240.31"
+        rx="24"
+        width="240.31"
+        x="270.57"
+      ></rect>{" "}
+      <path
+        d="M215.12 254.73V68.5a29.16 29.16 0 0 0-8.55-20.64 29.19 29.19 0 0 0-41.28 0L16.18 197a55.27 55.27 0 0 0 0 78.14l220.71 220.68a55.27 55.27 0 0 0 78.14 0l149.11-149.11a29.19 29.19 0 0 0 0-41.28l-1.14-1.12a29.16 29.16 0 0 0-20.64-8.55H256.15a41 41 0 0 1-41.03-41.03z"
+        fill="inherit"
+      ></path>
+    </svg>
+  );
+};
+
 export {
+  EmailJSSVG,
+  MotionSVG,
+  NextSvg,
   ExpressSVG,
   NodeJSSVG,
   ReactSVG,
