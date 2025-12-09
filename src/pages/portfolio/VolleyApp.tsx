@@ -27,7 +27,7 @@ const VolleyApp = () => {
             <li>Node</li>
           </ul>
 
-          <button className="bg-mudkip hover:bg-mudkip/80 text-background">
+          <button className="bg-mudkip hover:bg-mudkip/80">
             <a href="https://sports-data-app.vercel.app/" target="_blank">
               Visit App <SquareArrowUpRight className="size-4" />
             </a>
