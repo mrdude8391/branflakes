@@ -9,7 +9,6 @@ import {
   EmailJSSVG,
   MotionSVG,
 } from "../assets/SvgLogos";
-import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
