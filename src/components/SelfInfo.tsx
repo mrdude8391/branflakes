@@ -60,7 +60,7 @@ const SelfInfo = () => {
           className="flex flex-auto"
         >
           <button className="social-button">
-            <GithubSVG className="size-5 lg:size-6 fill-foreground" />
+            <GithubSVG className="size-5 lg:size-6 fill-inherit" />
             GitHub
           </button>
         </a>
@@ -70,7 +70,7 @@ const SelfInfo = () => {
           className="flex flex-auto"
         >
           <button className="social-button">
-            <LinkedInSVG className="size-5 lg:size-6 fill-foreground" />
+            <LinkedInSVG className="size-5 lg:size-6 fill-inherit" />
             LinkedIn
           </button>
         </a>
