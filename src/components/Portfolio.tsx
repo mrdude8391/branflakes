@@ -1,5 +1,7 @@
 import { SquareArrowOutUpRight } from "lucide-react";
-import SportsDesktopImg from "/src/assets/sports_app_screenshots/vb - athlete stat.png";
+import SportsDesktopImg from "/src/assets/sportsApp/vb - athlete stat.png";
+import YMTImg from "/src/assets/ymt/home.png";
+
 import {
   ReactSVG,
   MongoDBSVG,
@@ -65,9 +67,9 @@ const VbAppCard = () => {
 
 const YMTCard = () => {
   return (
-    <a href="/volley">
+    <a href="/ymt">
       <div className="project-image-card group">
-        <img src={SportsDesktopImg} alt="Sports app desktop image" />
+        <img src={YMTImg} alt="Sports app desktop image" />
 
         <div className="overlay group-hover:bottom-0 ">
           <h3>YMT Website</h3>

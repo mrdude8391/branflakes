@@ -19,7 +19,7 @@ const Experience = () => {
 
         <WorkItem>
           <Company>YMT Lion Dance</Company>
-          <Title>Full Stack Web Developer</Title>
+          <Title>Freelance Web Developer</Title>
           <Date>2025</Date>
           <Description>
             Designed and developed a website for a local lion dance team. It

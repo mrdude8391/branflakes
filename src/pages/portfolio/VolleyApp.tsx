@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import SportsDesktopImg from "/src/assets/sports_app_screenshots/vb - athlete stat.png";
-import LoginImg from "/src/assets/sports_app_screenshots/vb - login.png";
-import AthleteListImg from "/src/assets/sports_app_screenshots/vb - athletes list.png";
-import AthleteStatChartImg from "/src/assets/sports_app_screenshots/vb - athlete stat chart.png";
-import AthleteStatTableImg from "/src/assets/sports_app_screenshots/vb - athlete stat table.png";
-import AthleteStatListImg from "/src/assets/sports_app_screenshots/vb - athlete stat list.png";
-import AthleteStatDatePickerImg from "/src/assets/sports_app_screenshots/vb - athlete stat date picker.png";
+import SportsDesktopImg from "/src/assets/sportsApp/vb - athlete stat.png";
+import LoginImg from "/src/assets/sportsApp/vb - login.png";
+import AthleteListImg from "/src/assets/sportsApp/vb - athletes list.png";
+import AthleteStatChartImg from "/src/assets/sportsApp/vb - athlete stat chart.png";
+import AthleteStatTableImg from "/src/assets/sportsApp/vb - athlete stat table.png";
+import AthleteStatListImg from "/src/assets/sportsApp/vb - athlete stat list.png";
+import AthleteStatDatePickerImg from "/src/assets/sportsApp/vb - athlete stat date picker.png";
 import { SquareArrowUpRight } from "lucide-react";
 const VolleyApp = () => {
   return (
@@ -27,7 +27,7 @@ const VolleyApp = () => {
             <li>Node</li>
           </ul>
 
-          <button className="bg-mudkip hover:bg-mudkip/80">
+          <button>
             <a href="https://sports-data-app.vercel.app/" target="_blank">
               Visit App <SquareArrowUpRight className="size-4" />
             </a>

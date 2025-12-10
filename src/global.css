@@ -167,6 +167,10 @@
     @apply w-full bg-container items-center p-4 border rounded-lg flex flex-col gap-2;
   }
 
+  .project-details-inner .header button {
+    @apply bg-mudkip hover:bg-mudkip/80;
+  }
+
   .project-details-inner .header .tech-list {
     @apply flex gap-2 flex-wrap mb-4;
   }
@@ -204,6 +208,10 @@
 
   .project-details .images-inner li {
     @apply rounded-lg bg-accent;
+  }
+
+  .project-details .images-inner video {
+    @apply rounded-lg;
   }
 
   .project-details .images-inner img {
