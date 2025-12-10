@@ -67,16 +67,12 @@
   @apply mx-auto w-full px-4 items-start transition-all;
 }
 
-@utility rounded-accent-container {
-  @apply px-4 py-1 flex-auto hover:scale-105 transition-all flex items-center rounded-2xl bg-accent;
-}
-
 @utility flexCol {
   @apply flex flex-col;
 }
 
 @utility flexCenter {
-  @apply flex flex-col items-center justify-center;
+  @apply flex items-center justify-center;
 }
 
 @utility dashboard-card {
@@ -103,8 +99,26 @@
     @apply transition-all duration-300 ease-in-out opacity-50 hover:opacity-100;
   }
 
-  .social-button {
-    @apply bg-mudkip fill-foreground px-4 py-2 flex items-center hover:border hover:bg-mudkip/80 hover:scale-103 transition-all justify-center w-full rounded-lg gap-2 lg:text-lg;
+  /* Self Info */
+
+  .self-info .tag-container {
+    @apply flex flex-wrap bg-background gap-2 px-4 py-2 rounded-lg text-foreground-muted fill-foreground-muted;
+  }
+
+  .self-info .rounded-accent-tag {
+    @apply gap-1 px-4 py-1 flex-auto hover:scale-105 transition-all flex items-center rounded-2xl bg-accent;
+  }
+
+  .self-info .socials {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .self-info .socials a {
+    @apply flex flex-auto hover:scale-105 transition-all;
+  }
+
+  .self-info a button {
+    @apply w-full h-full flexCenter gap-2 bg-mudkip fill-foreground hover:bg-mudkip/80 lg:text-lg;
   }
 
   .projects {
@@ -167,15 +181,19 @@
     @apply w-full bg-container items-center p-4 border rounded-lg flex flex-col gap-2;
   }
 
-  .project-details-inner .header button {
-    @apply bg-mudkip hover:bg-mudkip/80;
+  .project-details-inner .header h1 {
+    @apply hover-pop;
   }
 
   .project-details-inner .header .tech-list {
     @apply flex gap-2 flex-wrap mb-4;
   }
   .project-details-inner .header .tech-list li {
-    @apply text-sm bg-accent px-2 rounded-xl;
+    @apply text-sm bg-accent px-2 rounded-xl hover-pop hover:scale-110;
+  }
+
+  .project-details-inner .header button {
+    @apply bg-mudkip hover:bg-mudkip/80 hover-pop;
   }
 
   .project-details-inner .header button a {
@@ -186,16 +204,24 @@
     @apply flexCol gap-4 w-full;
   }
 
+  .project-details-inner .description .hero h2 {
+    @apply hover-pop origin-left;
+  }
+
   .project-details-inner .description .hero p {
-    @apply mt-2;
+    @apply mt-2 hover-pop origin-left scale-103;
   }
 
   .project-details-inner .description .features h2 {
-    @apply mb-2;
+    @apply mb-2 hover-pop origin-left;
+  }
+
+  .project-details-inner .description .features p {
+    @apply hover-pop origin-left;
   }
 
   .project-details .images {
-    @apply px-4 bg-accent w-full flexCenter py-[6rem];
+    @apply px-4 bg-accent w-full flexCenter  py-24;
   }
 
   .project-details .images-inner {
@@ -203,7 +229,7 @@
   }
 
   .project-details .images-inner ul {
-    @apply flexCenter gap-4;
+    @apply flexCenter flex-col gap-4;
   }
 
   .project-details .images-inner li {
