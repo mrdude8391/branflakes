@@ -146,14 +146,13 @@
   }
 
   .project-image-card img {
-    @apply rounded-lg hover:scale-110 duration-300 transition-all ease-in-out;
+    @apply aspect-square sm:aspect-16/9 object-cover  rounded-lg hover:scale-110 duration-300 transition-all ease-in-out;
   }
 
   .project-image-card button {
     @apply flex items-center w-fit mt-2 text-[12px] p-1 px-2 bg-foreground text-background;
   }
-
-  .project-image-card .overlay::before {
+  s .project-image-card .overlay::before {
     top: 0;
     left: 0;
     pointer-events: none;
