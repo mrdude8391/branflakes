@@ -152,7 +152,7 @@
   .project-image-card button {
     @apply flex items-center w-fit mt-2 text-[12px] p-1 px-2 bg-foreground text-background;
   }
-  s .project-image-card .overlay::before {
+  .project-image-card .overlay::before {
     top: 0;
     left: 0;
     pointer-events: none;
