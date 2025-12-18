@@ -56,6 +56,7 @@ const VolleyApp = () => {
             <p>📊 Dynamic charts and data visualizations</p>
             <p>💻 Responsive UI for both desktop and mobile</p>
             <p>🌗 Light and dark UI modes</p>
+            <p>📝 CRUD using MongoDB</p>
           </div>
         </div>
       </div>
