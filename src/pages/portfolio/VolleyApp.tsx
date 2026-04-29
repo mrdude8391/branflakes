@@ -20,11 +20,11 @@ const VolleyApp = () => {
           <h1>🏐 Volleyball stats tracking app</h1>
           <ul className="tech-list">
             <li>React</li>
+            <li>FastAPI</li>
+            <li>Supabase</li>
             <li>TypeScript</li>
+            <li>Python</li>
             <li>Tailwind</li>
-            <li>MongoDB</li>
-            <li>Express</li>
-            <li>Node</li>
           </ul>
 
           <button>
@@ -46,8 +46,8 @@ const VolleyApp = () => {
               range to view to narrow down the results.
             </p>
             <p>
-              The app was built using the popular MERN stack and hosted on
-              Vercel.
+              The app was built using React for the frontend, FastAPI and
+              Supabase for the backend, and hosted on Vercel.
             </p>
           </div>
           <div className="features">
@@ -56,7 +56,7 @@ const VolleyApp = () => {
             <p>📊 Dynamic charts and data visualizations</p>
             <p>💻 Responsive UI for both desktop and mobile</p>
             <p>🌗 Light and dark UI modes</p>
-            <p>📝 CRUD using MongoDB</p>
+            <p>📝 CRUD using FastAPI</p>
           </div>
         </div>
       </div>
