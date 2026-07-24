@@ -5,7 +5,6 @@ import YMTImg from "/src/assets/ymt/home.png";
 import {
   ReactSVG,
   TypescriptSVG,
-  ExpressSVG,
   NextSvg,
   EmailJSSVG,
   MotionSVG,
