@@ -4,12 +4,13 @@ import YMTImg from "/src/assets/ymt/home.png";
 
 import {
   ReactSVG,
-  MongoDBSVG,
+  TypescriptSVG,
   ExpressSVG,
-  NodeJSSVG,
   NextSvg,
   EmailJSSVG,
   MotionSVG,
+  FastApiSVG,
+  PostgreSQLSVG,
 } from "../assets/SvgLogos";
 
 const Portfolio = () => {
@@ -37,20 +38,20 @@ const VbAppCard = () => {
             <h3>Volleyball Tracker</h3>
             <ul>
               <li>
-                <MongoDBSVG className="size-6 fill-foreground" />
-                <p>MongoDB</p>
-              </li>
-              <li>
-                <ExpressSVG className="size-6 fill-foreground" />
-                <p>Express</p>
-              </li>
-              <li>
                 <ReactSVG className="size-6 fill-foreground" />
                 <p>React</p>
               </li>
               <li>
-                <NodeJSSVG className="size-6 fill-foreground" />
-                <p>Node.js</p>
+                <FastApiSVG className="size-6 fill-foreground" />
+                <p>FastAPI</p>
+              </li>
+              <li>
+                <PostgreSQLSVG className="size-6 fill-foreground" />
+                <p>PostgreSQL</p>
+              </li>
+              <li>
+                <TypescriptSVG className="size-6 fill-foreground" />
+                <p>Typescript</p>
               </li>
             </ul>
             <p>Volleyball stats tracker and data visualizer</p>
