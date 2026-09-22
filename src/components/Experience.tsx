@@ -13,7 +13,7 @@ const Experience = () => {
             Added and maintained features on .NET application and internal web
             tooling in Angular. Made a fully functioning live chat service in
             the .NET application. Created API endpoints and managed data using
-            Microsoft SQL. What the.
+            Microsoft SQL.
           </Description>
         </WorkItem>
 
