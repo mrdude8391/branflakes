@@ -1,5 +1,5 @@
 import React from "react";
-import "github-markdown-css/github-markdown.css";
+
 // Using ES6 import syntax
 import hljs from "highlight.js";
 
