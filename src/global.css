@@ -49,13 +49,16 @@
   }
   h1 {
     @apply text-4xl font-bold;
+    border-bottom: 0px !important;
   }
   h2 {
     @apply text-2xl font-bold;
+    border-bottom: 0px !important;
   }
 
   h3 {
     @apply text-xl font-semibold;
+    border-bottom: 0px !important;
   }
 
   footer {
@@ -241,5 +244,16 @@
 
   .project-details .images-inner img {
     @apply rounded-lg;
+  }
+}
+
+.markdown-body {
+  background-color: var(--container) !important;
+}
+.journals {
+  .journal {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3em;
+    margin-top: 3em;
   }
 }
