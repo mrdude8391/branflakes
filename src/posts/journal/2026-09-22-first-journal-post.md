@@ -41,4 +41,4 @@ The next things I need to add:
 - [ ] A way to read all the posts from the folder
 - [ ] Separate the posts in a chronological order
 - [ ] Styling that doesn't look like GitHub
-- [ ] Make use of markdowns frontmatter
+- [ ] Make use of markdowns front matter
