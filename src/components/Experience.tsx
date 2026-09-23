@@ -1,6 +1,9 @@
 import type { ReactNode } from "react";
+import Markdown from "react-markdown";
 
 const Experience = () => {
+  const markdown = "# Hi, *Pluto*!";
+
   return (
     <section className="dashboard-card flex flex-col gap-8">
       <h1 className="hover-pop origin-bottom-left">Experience</h1>
@@ -27,6 +30,8 @@ const Experience = () => {
             animations.
           </Description>
         </WorkItem>
+
+        <Markdown>{markdown}</Markdown>
       </div>
     </section>
   );
