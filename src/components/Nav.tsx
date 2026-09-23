@@ -17,6 +17,9 @@ const Nav = () => {
           <Link to="/about" className={navButtonBehavior("/about")}>
             About
           </Link>
+          <Link to="/journal" className={navButtonBehavior("/journal")}>
+            Journal
+          </Link>
         </div>
       </nav>
     </>
