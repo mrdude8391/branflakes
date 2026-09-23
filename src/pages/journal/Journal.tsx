@@ -1,9 +1,6 @@
-import React from "react";
 import Markdown from "markdown-to-jsx/react";
 import markdownContent from "../../posts/journal/2026-09-22-first-journal-post.md?raw";
-import "github-markdown-css/github-markdown.css";
-// Using ES6 import syntax
-import hljs from "highlight.js";
+import SyntaxHighlightedCode from "../../components/SyntaxHighlightedCode";
 
 const Journal = () => {
   return (
@@ -17,21 +14,6 @@ const Journal = () => {
       </div>
     </section>
   );
-};
-
-const SyntaxHighlightedCode = (props: React.HTMLAttributes<HTMLElement>) => {
-  const ref = React.useRef<HTMLElement | null>(null);
-
-  React.useEffect(() => {
-    if (ref.current && props.className?.includes("lang-") && hljs) {
-      hljs.highlightElement(ref.current);
-
-      // hljs won't reprocess the element unless this attribute is removed
-      ref.current.removeAttribute("data-highlighted");
-    }
-  }, [props.className, props.children]);
-
-  return <code {...props} ref={ref} />;
 };
 
 export default Journal;
