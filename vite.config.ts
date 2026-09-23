@@ -8,6 +8,8 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    nodePolyfills({ globals: { Buffer: true } }),
+    nodePolyfills({
+      globals: { Buffer: true },
+    }),
   ],
 });
