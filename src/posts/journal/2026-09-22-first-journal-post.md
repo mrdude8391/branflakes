@@ -8,10 +8,6 @@ tags:
   - Web Development
 ---
 
-# First Post
-
-## 2026-09-22
-
 This is the first entry of my engineering journal.
 
 I want to document all the cool and interesting things I learn so I can look back at my progress.
