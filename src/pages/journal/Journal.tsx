@@ -1,6 +1,6 @@
 import React from "react";
 import Markdown from "markdown-to-jsx/react";
-import markdownContent from "../../posts/2026-09-22-first-journal-post.md?raw";
+import markdownContent from "../../posts/journal/2026-09-22-first-journal-post.md?raw";
 import "github-markdown-css/github-markdown.css";
 // Using ES6 import syntax
 import hljs from "highlight.js";
