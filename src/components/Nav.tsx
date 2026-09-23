@@ -12,7 +12,7 @@ const Nav = () => {
       <nav>
         <div className="flex items-center h-full justify-center gap-12 ">
           <Link to="/" className={navButtonBehavior("/")}>
-            Work
+            Jr-Chee Hu
           </Link>
           {/* <Link to="/about" className={navButtonBehavior("/about")}>
             About
