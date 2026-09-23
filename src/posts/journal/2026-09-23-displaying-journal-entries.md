@@ -43,7 +43,7 @@ Now I can parse the content and front matter directly from the `.md` file and di
 }
 ```
 
-### Eager loading all journal.md files using Vite
+### Vite glob() function to import multiple files from file system
 
 Vite supports importing multiple modules from the file system using their `import.meta.glob()` function [(glob)](https://vite.dev/guide/features#glob-import) so I used that to import all the `.md` files. To import as `string` I had to use custom import options. I also want to load all the journal entries at the front so I also had to specify `eager` loading. The options were all in the docs.
 
@@ -57,6 +57,6 @@ const journalGlobs = import.meta.glob("../../src/posts/journal/*.md", {
 
 Now I just simply parse all the journal entries with `gray-matter` and then display the content in my component.
 
-### Sorting posts by most recent
+### Sorting posts by most recent using file system
 
 My idea is to use the system's file system to my advantage since the files are all stored in alphabetical order, so if I name the files starting with the date when they are read they will already be in order. Then I just need to reverse the array to get my result.
