@@ -8,138 +8,41 @@ tags:
   - Web Development
 ---
 
-# h1 Heading 8-)
+# First Post
 
-## h2 Heading
+## 2026-09-22
 
-### h3 Heading
+This is the first entry of my engineering journal.
 
-#### h4 Heading
+I want to document all the cool and interesting things I learn so I can look back at my progress.
+It will also help hold me accountable so I keep learning and can contribute everyday.
+I was inspired by another blog from [Andrew Healey](https://healeycodes.com/) who was inspired by [Mu-An Chiou](https://muan.co/) to create this. As well as how to execute it using markdown.
 
-##### h5 Heading
+### How this was made
 
-###### h6 Heading
+It was actually trickier than I thought. First I needed a way to render markdown into HTML elements. React has a popular option [react-markdown](https://github.com/remarkjs/react-markdown), but a few features like lists and block quotes required an extra plugin. So instead I am using [markdown-to-jsx](https://github.com/quantizor/markdown-to-jsx). Currently the markdown is all styled using Github's markdown css library.
 
-## Horizontal Rules
-
----
-
----
-
----
-
-## Typographic replacements
-
-Enable typographer option to see result.
-
-(c) (C) (r) (R) (tm) (TM) +-
-
-test.. test... test..... test?..... test!....
-
-!!!!!! ???? ,, -- ---
-
-"Smartypants, double quotes" and 'single quotes'
-
-## Emphasis
-
-**This is bold text**
-
-**This is bold text**
-
-_This is italic text_
-
-_This is italic text_
-
-~~Strikethrough~~
-
-## Blockquotes
-
-> Blockquotes can also be nested...
->
-> > ...by using additional greater-than signs right next to each other...
-> >
-> > > ...or with spaces between arrows.
-
-## Lists
-
-Unordered
-
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-4. You can use sequential numbers...
-5. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-```js
-const foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-break
+The next feature I wanted was the ability to share a code block. So I needed a way to make code blocks highlighted by color. Which is where a syntax highlighter light [highlight.js](https://highlightjs.org/) comes in. Below is a beautiful example of how this will look.
 
 ```python
-def hello():
-    print("Hello")
+# 160. Intersection of two linked lists
+def getIntersectionNode(
+        self, headA: ListNode, headB: ListNode
+    ) -> Optional[ListNode]:
+        # combine the two lists. a + b will have equal lengths as b + a. Therefore the nodes will sync up
+        # we can exit when either the two curr nodes are the same. Either the same node or both reached the end null
+
+        list_a, list_b = headA, headB
+        while list_a != list_b:
+            list_a = list_a.next if list_a else headB
+            list_b = list_b.next if list_b else headA
+        return list_a
 ```
 
-## Tables
+I've created a new directory folder for posts so to add a new post, I just add a new markdown file.\
+The next things I need to add:
 
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-
-Right aligned columns
-
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+- [ ] A way to read all the posts from the folder
+- [ ] Separate the posts in a chronological order
+- [ ] Styling that doesn't look like GitHub
+- [ ] Make use of markdowns frontmatter
