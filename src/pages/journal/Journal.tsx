@@ -7,20 +7,14 @@ import matter from "gray-matter";
 const Journal = () => {
   const matterResult = matter(markdownContent);
   const { content, data } = matterResult;
-  const { title, date } = data;
   return (
     <section className="dashboard-card flex flex-col gap-12 ">
       <ul className="journals markdown-body">
         <li className="journal">
-          <p>{title}</p>
-          <p>{date}</p>
+          <h1>{data.title}</h1>
+          <p>{data.date}</p>
           <Markdown options={{ overrides: { code: SyntaxHighlightedCode } }}>
             {content}
-          </Markdown>
-        </li>
-        <li className="journal">
-          <Markdown options={{ overrides: { code: SyntaxHighlightedCode } }}>
-            {markdownContent}
           </Markdown>
         </li>
       </ul>
