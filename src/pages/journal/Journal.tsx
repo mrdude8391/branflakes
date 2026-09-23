@@ -11,6 +11,7 @@ const Journal = () => {
         {journals.map((journal) => (
           <li key={journal.id} className="journal">
             <h1>{journal.title}</h1>
+            <h3>{journal.description}</h3>
             <p>{journal.date}</p>
             <Markdown options={{ overrides: { code: SyntaxHighlightedCode } }}>
               {journal.content}

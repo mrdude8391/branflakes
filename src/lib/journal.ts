@@ -1,7 +1,5 @@
 import matter from "gray-matter";
 
-const JOURNAL_POSTS_PATH = "../../posts/journal/*.md";
-
 export function getJournalPosts() {
   const journalGlobs = import.meta.glob("../../src/posts/journal/*.md", {
     query: "?raw",
@@ -19,5 +17,5 @@ export function getJournalPosts() {
       tags: matterResult.data.tags,
     };
   });
-  return journals;
+  return journals.reverse();
 }
