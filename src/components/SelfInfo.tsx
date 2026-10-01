@@ -13,8 +13,11 @@ const SelfInfo = () => {
         <h1 className="hover-pop origin-bottom-left">Bryan (Jr-Chee) Hu</h1>
         <p className="sub hover-pop origin-bottom-left">Software Engineer</p>
         <p className="mt-4 sm:text-xl hover-pop origin-bottom-left hover:scale-102">
-          I'm a full stack developer and specialize in creating professional
-          websites and web apps.
+          I'm a junior full-stack developer with a backend focus. I've worked
+          with C#/.NET and SQL professionally, and more recently I've been
+          building applications with React, TypeScript, FastAPI and PostgreSQL.
+          I'm particularly interested in backend APIs, database design, testing,
+          and building reliable web applications.
         </p>
       </div>
       <div className="tag-container">
