@@ -45,4 +45,5 @@ def find_majority_element(nums):
             count += 1
         else:
             count -= 1
+    return candidate
 ```
