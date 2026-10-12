@@ -22,9 +22,9 @@ while can_increment:
 
 ### Example 1 Using the previous value: LC 15. 3Sum
 
-In 3sum we find the sum of 3 indexes while only moving one index at a time. If we find a target we add the first instance of it and then increment the `j` index. And then implement the pattern. To reiterate, while we are in the two pointers loop, after we move the `j` pointer, we check if the value is the same as the previous one we just moved from, if it is then we keep incrementing.
+In 3sum we find the sum of 3 indexes while only moving one index at a time. If we find a target we add the first instance of it and then increment the `j` index. And then implement the pattern.
 
-In this two pointer problem using a List, the pattern is applied by looking at the previous value. We increment first with `j+=1` and then check the new item with the previous one; along with `j<k` to make sure we can keep incrementing.
+We found our target, add it, and then increment. But now we need to deal with if this neighboring item is a duplicate of our target. We think "if this new `j` index is the same as our previous one then we go next", we turn that into a `while` per our strategy if there are more than 1 duplicates. So now it becomes "while this `j` value is the same as the previous one keep going". Along with `j<k` to make sure we aren't breaking the boundaries.
 
 ```python
 # 15. 3sum (shortened)
@@ -72,7 +72,7 @@ def threeSum(self, nums: list[int]) -> list[list[int]]:
 
 In 83. remove duplicates from linked list, while our next node has the same value as our current node, then we want to skip. In this version we don't look at the previous because of the way the nodes are, we can just look at the next.
 
-For the linked list, we implement the pattern by checking the next value. We make sure that there is a next value to look at and then compare them. But instead of incrementing like in a list we increment with `node.next`.
+We think "if the current value is the same as the next value" then we want to skip to the next next. We turn that to a "`while` the current value is the same as the next value". For the linked list, we implement the pattern by checking the next value. We make sure that there is a next value to look at and then compare them. But instead of incrementing like in a list we increment with `node.next`.
 
 ```python
 # 83. Remove Duplicates from Sorted List (shortened)
