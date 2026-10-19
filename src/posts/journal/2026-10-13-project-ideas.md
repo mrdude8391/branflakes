@@ -1,5 +1,5 @@
 ---
-title: "Project Ideass"
+title: "Project Ideas"
 date: "2026-10-13"
 description: "A random list of project ideas."
 tags:
