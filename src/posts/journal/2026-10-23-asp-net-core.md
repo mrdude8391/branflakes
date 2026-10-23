@@ -12,7 +12,7 @@ Good Medium article about it. [Article](https://medium.com/@bhargavkoya56/buildi
 
 ### Dependency Injection (DI)
 
-C# or .NET likes to use dependency injection to manage object life-cycles and dependencies.
+C# or .NET likes to use dependency injection to manage object life-cycles and dependencies. Say a controller requires a service. Instead of the controller class creating a new instance of the service, the service is created by some other container and then the service object is given to the controller.
 
 #### What is Dependency Injection?
 
