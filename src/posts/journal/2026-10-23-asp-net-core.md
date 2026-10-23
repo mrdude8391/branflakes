@@ -14,6 +14,10 @@ Good Medium article about it. [Article](https://medium.com/@bhargavkoya56/buildi
 
 C# or .NET likes to use dependency injection to manage object life-cycles and dependencies.
 
+#### What is Dependency Injection?
+
+Imagine you’re building a car. Instead of manufacturing the engine, transmission, and wheels yourself, you order them from specialized factories. Dependency Injection (DI) works similarly instead of creating objects directly, you request them from a centralized container. -Medium Article
+
 ### Middleware Pipeline
 
 ### OOP Structure
