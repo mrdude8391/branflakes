@@ -18,6 +18,10 @@ C# or .NET likes to use dependency injection to manage object life-cycles and de
 
 Imagine you’re building a car. Instead of manufacturing the engine, transmission, and wheels yourself, you order them from specialized factories. Dependency Injection (DI) works similarly instead of creating objects directly, you request them from a centralized container. -Medium Article
 
+#### Why Do We Need It?
+
+DI solves the problem of tight coupling and makes your code testable. Without DI, your classes create their own dependencies, making it impossible to substitute mock objects during testing.
+
 ### Middleware Pipeline
 
 ### OOP Structure
