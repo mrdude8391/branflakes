@@ -59,3 +59,79 @@ namespace MyNamespace // Namespace declaration
 }
 
 ```
+
+## Creating the Backend
+
+### 1. Setup Folder Structure
+
+```
+job-helper-api/
+├── Controllers/
+├── Data/
+├── Features/
+├── Entities/
+├── Middleware/
+├── Program.cs
+├── appsettings.json
+└── job-helper-api.csproj
+```
+
+### 2.1 Configure Entity Framework Core & Create AppDbContext
+
+EF core is the ORM for .NET. npgsql is the provider that lets EF core talk to PostgreSQL. EF core uses LINQ to instead of SQL for database operations.
+
+Create an AppDbContext Class that inherits from the DbContext class, which will represent a session with our database.
+
+Then register the AppDbContext class as our DbContext service that uses Npgsql. We also need to provide it the connection string. Connection string is provided using dotnet's user-secrets.
+
+```c#
+using JobHelper.Api.Entities;
+using Microsoft.EntityFrameworkCore;
+
+namespace JobHelper.Api.Data;
+
+public class AppDbContext : DbContext
+{
+    public AppDbContext(
+        DbContextOptions<AppDbContext> options
+    ) : base(options)
+    {
+    }
+    public DbSet<User> Users => Set<User>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+    }
+}
+```
+
+### 3. Create User Entity
+
+```c#
+namespace JobHelper.Api.Entities;
+
+public class User
+{
+    public Guid Id { get; set; }
+    public string Email { get; set; } = string.Empty;
+    public string PasswordHash { get; set; } = string.Empty;
+    public DateTime CreatedAt { get; set; }
+}
+```
+
+After creating the user class for our user entity, we need to map the class to the database context so that EF core knows that this class represents a database table.
+
+```c#
+// AppDbContext.cs
+public DbSet<User> Users => Set<User>();
+```
+
+We add this line to AppDbContext.
+
+4. Create First EF Core Migration
+5. Implement Authentication
+6. Implement JobApplications
+7. Add Testing and Error Handling
