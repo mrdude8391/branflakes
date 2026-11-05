@@ -174,7 +174,70 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 }
 ```
 
-4. Create First EF Core Migration
-5. Implement Authentication
-6. Implement JobApplications
-7. Add Testing and Error Handling
+### 4. Create First EF Core Migration
+
+EF Core provides CLI tools to let you manage Database Migrations.
+
+```
+Command	                    Purpose
+dotnet ef migrations add	Generate a migration from model changes
+dotnet ef database update	Apply migrations to your database
+dotnet ef migrations list	List migrations in your project
+```
+
+Install the tool
+
+```powershell
+dotnet tool install --global dotnet-ef
+```
+
+EF Core to inspect your entities and generate migration instructions.
+
+```powershell
+dotnet ef migrations add InitialCreate
+```
+
+Then run
+
+```powershell
+dotnet ef database update
+```
+
+If the tables already exist we need to create a database baseline.
+
+```powershell
+dotnet ef migrations add InitialBaseline
+```
+
+Which creates 3 migration files.
+
+```
+File	                        Responsibility
+InitialBaseline.cs	            Contains the database operations for this migration.
+InitialBaseline.Designer.cs	    Contains migration metadata and the model at that point.
+AppDbContextModelSnapshot.cs	Stores EF Core's latest known model structure for comparing future changes.
+```
+
+For a baseline we remove everything it the `Up()` and `Down()` so that when the migration runs, it doesn't modify the database since the tables already exist. Just make sure the entity, schema, and config match up with the PostgreSQL schema.
+
+Once the migration file is ready we run:
+
+```powershell
+dotnet ef database update
+```
+
+EF core will execute the `Up()` method which for a baseline file will be empty, and then create it's migration history table.
+
+Now in the future if you need to add a new column to a table:
+
+1. Update the Entity
+2. Update the config.
+3. Generate migration
+4. Inspect the migration file.
+5. Apply the migration.
+
+### 5. Implement Authentication
+
+### 6. Implement JobApplications
+
+### 7. Add Testing and Error Handling
