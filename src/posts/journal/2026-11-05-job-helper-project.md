@@ -46,6 +46,8 @@ The relational schema is visualized on tldraw. [Database Schema](https://www.tld
 
 In phase 2, I started up and configured ASP.NET CORE web API and setup the PostgreSQL database using a docker container. The API was hooked up to the PostgreSQL instance using EF Core.
 
+Added Naming convention to npgsql so that ef core so that EF Core entities and SQL columns align automatically. EF Core entities use PascalCase while SQL columns use snake_case.
+
 ### Project architecture
 
 The API architecture was established using a feature-based architecture that separates API controllers, business logic, and data access. The key architecture is below.
@@ -72,6 +74,8 @@ Services/
 ```
 
 ### Database Migrations
+
+Added ef core migrations tool to handle database migrations.
 
 ### Configure Logging, exception handling, validation
 
