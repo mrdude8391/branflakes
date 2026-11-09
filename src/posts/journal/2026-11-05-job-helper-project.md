@@ -79,6 +79,12 @@ Added ef core migrations tool to handle database migrations.
 
 ### Configure Logging, exception handling, validation
 
+#### Error Handling
+
+Create a global error handler that complies with [ProblemDetails (RFC 9457)](https://www.rfc-editor.org/info/rfc9457/).
+Services report failures using custom exceptions.
+Unhandled exceptions will be turned into `ProblemDetails` responses using an `IExceptionHandler`.
+
 ## Phase 3. Frontend Foundation
 
 ### Project Architecture
