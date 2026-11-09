@@ -14,6 +14,8 @@ Good Medium article about it. [Article](https://medium.com/@bhargavkoya56/buildi
 
 C# or .NET likes to use dependency injection to manage object life-cycles and dependencies. Say a controller requires a service. Instead of the controller class creating a new instance of the service, the service is created by some other container and then the service object is given to the controller.
 
+Dependency injection goes hand in hand with the middleware pipeline. In this framework, dependencies are created using the `builder.Services.AddX()` functions. Essentially it's a list of recipes of objects the app might need, and its lifecycle (scoped, singleton, transient). For example after creating a `DbContext` dependency, anytime the app requires the `DbContext` the framework will provide it through its DI Container.
+
 #### What is Dependency Injection?
 
 Imagine you’re building a car. Instead of manufacturing the engine, transmission, and wheels yourself, you order them from specialized factories. Dependency Injection (DI) works similarly instead of creating objects directly, you request them from a centralized container. -Medium Article
@@ -23,6 +25,8 @@ Imagine you’re building a car. Instead of manufacturing the engine, transmissi
 DI solves the problem of tight coupling and makes your code testable. Without DI, your classes create their own dependencies, making it impossible to substitute mock objects during testing.
 
 ### Middleware Pipeline
+
+The middleware pipeline is defined in .NET in the `Program.cs` file typically in the form of `app.UseX()` functions. The are implemented in order so for example the `GlobalExceptionHandler` will be registered first and then Http implemention after and so on.
 
 ### OOP Structure
 
