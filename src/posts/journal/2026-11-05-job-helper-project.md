@@ -77,8 +77,6 @@ Services/
 
 Added ef core migrations tool to handle database migrations.
 
-### Configure Logging, exception handling, validation
-
 #### Error Handling
 
 Create a global error handler that complies with [ProblemDetails (RFC 9457)](https://www.rfc-editor.org/info/rfc9457/).
@@ -90,43 +88,3 @@ Unhandled exceptions will be turned into `ProblemDetails` responses using an `IE
 ### Project Architecture
 
 I also employed a feature-based project architecture for the React + TypeScript fronted.
-
-### Routing
-
-Setup routing.
-
-### Created shared layouts and components
-
-### Setup API communication
-
-#### Reusable API hooks
-
-#### State Management
-
-### Basic Page Layouts
-
-## Phase 4. Build Features end-to-end
-
-- Database changes.
-- Backend entities and business logic.
-- API endpoints.
-- Frontend API integration.
-- Forms and user interactions.
-- Testing.
-
-## Phase 5 — Testing and refinement
-
-- Backend unit and integration tests.
-- Frontend component tests.
-- API validation and error handling.
-- Security review.
-- Performance improvements.
-
-## Phase 6 — Deployment
-
-- Configure production environment variables.
-- Deploy backend.
-- Deploy frontend.
-- Provision cloud PostgreSQL database.
-- Configure production CORS.
-- Configure CI/CD.
