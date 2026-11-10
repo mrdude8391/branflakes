@@ -239,9 +239,3 @@ Now in the future if you need to add a new column to a table:
 3. Generate migration
 4. Inspect the migration file.
 5. Apply the migration.
-
-### 5. Implement Authentication
-
-### 6. Implement JobApplications
-
-### 7. Add Testing and Error Handling
