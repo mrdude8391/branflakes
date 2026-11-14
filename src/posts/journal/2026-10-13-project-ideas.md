@@ -38,3 +38,10 @@ I want to keep a list of ideas that I can come back to and update.
 - Like google docs
 - web sockets (multiplayer)
 </details>
+
+<details>
+<summary>Chore Chart App</summary>
+- Dynamic Chore chart
+- Notifications
+- Schedule/Calendar
+</details>
